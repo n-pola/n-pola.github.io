@@ -27,7 +27,8 @@ body {
 	width: 100% !important;
 	display: flex;
 	padding: 20px;
-	background: var(--color-background-dark);
+	background: #efefef;
+	color: #333;
 }
 
 .l-mainHeader-title {
