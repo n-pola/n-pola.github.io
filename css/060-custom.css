@@ -1,0 +1,31 @@
+.l-mainHeader-img {
+	background: url("/img/mockup2.jpg");
+	background-size: cover;
+	width: 100% !important;
+	height: 100%;
+	background-position: center center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#l-mainHeader {
+	height: 100vh;
+	background: transparent;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	padding-top: 0 !important;
+}
+
+.l-mainHeader-title-wrap {
+	width: 100% !important;
+	display: flex;
+	padding: 20px;
+	background: var(--color-background-dark);
+}
+
+.l-mainHeader-title {
+	width: 1200px;
+	margin: 0.67em auto;
+}
