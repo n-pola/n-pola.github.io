@@ -41,7 +41,7 @@ nav#sticky-nav.sticky-nav-active {
 }
 
 nav#sticky-nav {
-	width: 100vw;
+	width: 100%;
 	background: #efefef;
 	padding: 20px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
@@ -61,11 +61,14 @@ nav#sticky-nav {
 
 .sticky-nav-menu {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+	grid-template-columns: repeat(auto-fit, minmax(auto, 140px));
+	justify-content: end;
+	justify-items: end;
 }
 
 .sticky-nav-menu a {
 	border-bottom: 0 !important;
 	align-items: center;
 	display: flex;
+	text-align: right;
 }
