@@ -22,6 +22,18 @@ jQuery(document).ready(function($) {
 			$("#l-mainContent").css("margin-top", "0px");
 		}
 	});
+
+	$('a[href*="#"]').on("click", function(e) {
+		e.preventDefault();
+		var href = $(this).attr("href");
+		let offset = $(href).offset().top - $("#sticky-nav").innerHeight() - 48;
+		$("html, body").animate(
+			{
+				scrollTop: offset
+			},
+			300
+		);
+	});
 });
 
 console.log("test");
