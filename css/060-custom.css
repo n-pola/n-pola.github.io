@@ -1,3 +1,7 @@
+body {
+	overflow-x: hidden;
+}
+
 .l-mainHeader-img {
 	background: url("/img/mockup2.jpg");
 	background-size: cover;
@@ -16,6 +20,7 @@
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 	padding-top: 0 !important;
+	margin-bottom: 0;
 }
 
 .l-mainHeader-title-wrap {
@@ -28,4 +33,39 @@
 .l-mainHeader-title {
 	width: 1200px;
 	margin: 0.67em auto;
+}
+
+nav#sticky-nav.sticky-nav-active {
+	position: fixed;
+	top: 0;
+}
+
+nav#sticky-nav {
+	width: 100vw;
+	background: #efefef;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+	margin-bottom: var(--xxxl);
+}
+
+.sticky-nav-content {
+	max-width: 1200px;
+	margin: 0.67em auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+}
+
+.sticky-nav-logo {
+	font-size: var(--fontsize-xxl);
+}
+
+.sticky-nav-menu {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+}
+
+.sticky-nav-menu a {
+	border-bottom: 0 !important;
+	align-items: center;
+	display: flex;
 }
