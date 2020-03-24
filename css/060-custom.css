@@ -73,3 +73,7 @@ nav#sticky-nav {
 	display: flex;
 	text-align: right;
 }
+
+.content-item {
+	border-top: 0 !important;
+}
