@@ -49,6 +49,15 @@ jQuery(document).ready(function($) {
 				.hide();
 		}
 	);
+
+	$(".sticky-nav-logo").click(function() {
+		$("html, body").animate(
+			{
+				scrollTop: 0
+			},
+			300
+		);
+	});
 });
 
 console.log("test");

@@ -58,6 +58,7 @@ nav#sticky-nav {
 
 .sticky-nav-logo {
 	font-size: var(--fontsize-xxl);
+	cursor: pointer;
 }
 
 .sticky-nav-menu {
