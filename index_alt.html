@@ -42,9 +42,28 @@ https://twitter.com/cnoss
 					<span>cda_</span>
 				</div>
 				<div class="sticky-nav-menu">
-					<a href="#einleitung">Einleitung ⯆</a>
-					<a href="#desktop">Desktop</a>
-					<a href="#mobile">Mobile</a>
+					<a href="#einleitung">Einleitung</a>
+					<div class="sticky-nav-submenu-wrap">
+						<a href="#desktop">Desktop ⯆</a>
+						<div class="sticky-nav-submenu" parent="desktop">
+							<a href="#overview">Overview</a>
+							<a href="#main">Main</a>
+							<a href="#sidebar">Sidebar</a>
+							<a href="#help">Hilfe</a>
+							<a href="#notifications">Notifications</a>
+						</div>
+					</div>
+					<div class="sticky-nav-submenu-wrap">
+						<a href="#mobile">Mobile ⯆</a>
+						<div class="sticky-nav-submenu" parent="desktop">
+							<a href="#m-start">Start Ansicht</a>
+							<a href="#m-detail">Detail Ansicht</a>
+							<a href="#m-browse">Browse Ansicht</a>
+							<a href="#m-search">Suche</a>
+							<a href="#m-filter">Filter</a>
+							<a href="#m-help">hilfe</a>
+						</div>
+					</div>
 					<a href="#styleguide">Styleguide</a>
 				</div>
 			</div>
@@ -135,7 +154,7 @@ https://twitter.com/cnoss
 
 				<!-- ContentBlock 50% Bild 50% Text
           ####################################################################-->
-				<figure class="m-portfolioItem2Columns content-item">
+				<figure id="overview" class="m-portfolioItem2Columns content-item">
 					<img
 						class="m-portfolioItem-image"
 						src="img/01-desktop-overview.jpg"
@@ -166,7 +185,7 @@ https://twitter.com/cnoss
 
 				<!-- ContentBlock 50% Bild 50% Text
           ####################################################################-->
-				<figure class="m-portfolioItem2Columns content-item">
+				<figure id="main" class="m-portfolioItem2Columns content-item">
 					<img class="m-portfolioItem-image" src="img/d/01-d-detail-main.png" />
 					<figcaption>
 						<h2 class="m-portfolioItem-title">Main</h2>
@@ -243,7 +262,7 @@ https://twitter.com/cnoss
 					</figcaption>
 				</figure>
 
-				<figure class="m-portfolioItem2Columns content-item">
+				<figure id="sidebar" class="m-portfolioItem2Columns content-item">
 					<img
 						class="m-portfolioItem-image"
 						src="img/d/05-d-detail-sidebar.jpg"
@@ -369,7 +388,7 @@ https://twitter.com/cnoss
 					</figcaption>
 				</figure>
 
-				<figure class="m-portfolioItem2Columns content-item">
+				<figure id="help" class="m-portfolioItem2Columns content-item">
 					<div>
 						<img src="img/04-dekstop-help_step1.jpg" />
 					</div>
@@ -395,7 +414,7 @@ https://twitter.com/cnoss
 					</figcaption>
 				</figure>
 
-				<figure class="m-portfolioItem2Columns content-item">
+				<figure id="notifications" class="m-portfolioItem2Columns content-item">
 					<div>
 						<img src="img/03-desktop-notification.jpg" />
 					</div>
@@ -462,7 +481,7 @@ https://twitter.com/cnoss
 				<!-- ContentBlock 3 Spalten mit Bild und Text
         ####################################################################-->
 				<figure class="m-portfolioItem3Columns  content-item">
-					<figcaption>
+					<figcaption id="m-start">
 						<img
 							class="m-portfolioItem-image"
 							src="img/m/02-m-small-wheel.jpg"
@@ -478,7 +497,7 @@ https://twitter.com/cnoss
 						</p>
 					</figcaption>
 
-					<figcaption>
+					<figcaption ide="m-detail">
 						<img
 							class="m-portfolioItem-image"
 							src="img/m/01-m-detail_wheel.jpg"
@@ -497,7 +516,7 @@ https://twitter.com/cnoss
 						</p>
 					</figcaption>
 
-					<figcaption>
+					<figcaption id="m-browse">
 						<img class="m-portfolioItem-image" src="img/m/03-m-explore.jpg" />
 						<h3 class="m-portfolioItem-subtitle">Browse Ansicht</h3>
 						<p>
@@ -513,7 +532,7 @@ https://twitter.com/cnoss
 				<!-- ContentBlock 3 Spalten mit Bild und Text
         ####################################################################-->
 				<figure class="m-portfolioItem3Columns  content-item">
-					<figcaption>
+					<figcaption id="m-search">
 						<img
 							class="m-portfolioItem-image"
 							src="img/m/04-m-search_explore.jpg"
@@ -529,7 +548,7 @@ https://twitter.com/cnoss
 						</p>
 					</figcaption>
 
-					<figcaption>
+					<figcaption id="m-filter">
 						<img class="m-portfolioItem-image" src="img/m/06-m-filter.jpg" />
 						<h3 class="m-portfolioItem-subtitle">Filter</h3>
 						<p>
@@ -545,7 +564,7 @@ https://twitter.com/cnoss
 						</p>
 					</figcaption>
 
-					<figcaption>
+					<figcaption id="m-help">
 						<img
 							class="m-portfolioItem-image"
 							src="img/m/05-m-help_step_1.jpg"

@@ -34,6 +34,21 @@ jQuery(document).ready(function($) {
 			300
 		);
 	});
+
+	$(".sticky-nav-submenu-wrap").hover(
+		function() {
+			$(this)
+				.children(".sticky-nav-submenu")
+				.show();
+			$.fx.off = true;
+		},
+		function() {
+			$.fx.off = false;
+			$(this)
+				.children(".sticky-nav-submenu")
+				.hide();
+		}
+	);
 });
 
 console.log("test");
