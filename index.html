@@ -1,22 +1,609 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+	<!-- ############################################################################ 
+
+Kurs «Screendesign» an der TH Köln
+Christian Noss
+christian.noss@th-koeln.de
+https://twitter.com/cnoss
+    
+############################################################################ -->
+
 	<head>
-		<link rel="stylesheet" href="css/empty.css" />
-		<link
-			href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap"
-			rel="stylesheet"
-		/>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<title>Screendesign Dokumentation von Luca Kilp und Nils Polarek</title>
 		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-		<title>SD Luca Kilp, Nils Polarek</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="js/helper.js"></script>
+
+		<!-- Custom Styles -->
+		<link rel="stylesheet" href="css/010-resets.css" />
+		<link rel="stylesheet" href="css/020-base.css" />
+		<link rel="stylesheet" href="css/030-layout.css" />
+		<link rel="stylesheet" href="css/040-modules.css" />
+		<link rel="stylesheet" href="css/050-addons.css" />
+		<link rel="stylesheet" href="css/060-custom.css" />
 	</head>
+
 	<body>
-		<header>
-			<h2>cda_</h2>
+		<header id="l-mainHeader">
+			<div class="l-mainHeader-title-wrap">
+				<h1 class="l-mainHeader-title">
+					Screendesign Dokumentation von Luca Kilp und Nils Polarek
+				</h1>
+			</div>
+			<div class="l-mainHeader-img"></div>
 		</header>
-		<main>
-			<h1>coming soon</h1>
+
+		<nav id="sticky-nav">
+			<div class="sticky-nav-content">
+				<div class="sticky-nav-logo">
+					<span>cda_</span>
+				</div>
+				<div class="sticky-nav-menu">
+					<a href="#einleitung">Einleitung</a>
+					<div class="sticky-nav-submenu-wrap">
+						<a href="#desktop">Desktop ⯆</a>
+						<div class="sticky-nav-submenu" parent="desktop">
+							<a href="#overview">Overview</a>
+							<a href="#main">Main</a>
+							<a href="#sidebar">Sidebar</a>
+							<a href="#help">Hilfe</a>
+							<a href="#notifications">Notifications</a>
+						</div>
+					</div>
+					<div class="sticky-nav-submenu-wrap">
+						<a href="#mobile">Mobile ⯆</a>
+						<div class="sticky-nav-submenu" parent="desktop">
+							<a href="#m-start">Start Ansicht</a>
+							<a href="#m-detail">Detail Ansicht</a>
+							<a href="#m-browse">Browse Ansicht</a>
+							<a href="#m-search">Suche</a>
+							<a href="#m-filter">Filter</a>
+							<a href="#m-help">hilfe</a>
+						</div>
+					</div>
+					<a href="#styleguide">Styleguide</a>
+				</div>
+			</div>
+		</nav>
+
+		<main id="l-mainContent">
+			<div class="l-grid-for-large-items">
+				<!-- ContentBlock 1/3 Bild 2/3 Text 
+          ####################################################################-->
+				<figure id="einleitung" class="m-portfolioItem">
+					<img class="m-portfolioItem-image" src="img/projekt-2019-hero.jpg" />
+					<figcaption>
+						<h2 class="m-portfolioItem-title">Einleitung</h2>
+						<h3 class="m-portfolioItem-subtitle">
+							Cranach Digital Archive
+						</h3>
+						<p>
+							Im Rahmen des dies jährigen
+							<a
+								target="_blank"
+								href="https://th-koeln.github.io/mi-bachelor-screendesign/projekt-2019/"
+								>Projektes</a
+							>
+							des Moduls
+							<a
+								target="_blank"
+								href="https://th-koeln.github.io/mi-bachelor-screendesign/"
+								>Screendesign</a
+							>
+							an der TH Köln galt es für das
+							<a target="_blank" href="http://lucascranach.org/index.php"
+								>Cranach Digital Archive</a
+							>, ein Archiv für Werke von und aus dem Umkreis des Künstlers
+							Lucas Cranach, eine Alternativ Ansicht für die Website zu
+							gestalten.
+						</p>
+						<p>
+							Voraussetzung für den neuen Entwurf war eine Darstellung, welche
+							sowohl Experten als auch Laien eine einfache und präzise Bedienung
+							bietet und neuen Nutzern die Inhalte angenehm darstellt. Weiterhin
+							galt es unerfahrenen und neuen Nutzern einen möglichst
+							explorativen Zugang zu den Werken von Luca Cranach zu ermöglichen.
+						</p>
+						<p>
+							Zentrale Elemente der neuen Website sollten eine Form von
+							Timeline, Cards zum Darstellen der Werke und diverse zusätzliche
+							Features sein. Erforderlich war eine Hilfe, das Wechseln der
+							Sprache, die Möglichkeit die Werke zu filtern und dies alles
+							möglichst übersichtlich darzustellen. Des Weiteren haben wir uns
+							dazu entschieden dem User die Möglichkeit zu geben sich über
+							Neuigkeiten zu informieren und die Werke bezogen auf seinen
+							aktuellen Standort zu sortieren.
+						</p>
+						<p>
+							Zudem sollte der Entwurf der neuen Website für zwei verschiedenen
+							Endgeräte erstellt werden.
+						</p>
+					</figcaption>
+				</figure>
+
+				<!-- ContentBlock Textblock mit Überschrift links
+        ####################################################################-->
+				<figure id="desktop" class="m-portfolioItem">
+					<figcaption>
+						<h2 class="m-portfolioItem-title">Desktop</h2>
+						<h3 class="m-portfolioItem-subtitle">1440x1024</h3>
+					</figcaption>
+					<figcaption>
+						<p>
+							Die Website wird von Experten und anderen Nutzergruppe
+							voraussichtlich primär über einen Desktop PC, Notebook oder Tablet
+							aufgerufen. Dementsprechend war das Ziel auf dieser Plattform den
+							vollen Umfang der Funktionen bereitzustellen und die gegeben
+							Fläche möglichst optimal zu nutzen.
+						</p>
+						<p>
+							Diese Ansicht ist mit den gegebenen Farben des Cranach Digital
+							Archives gestaltet und soll standardmäßig als „Dark-Theme“
+							dargestellt werden, da so die Highlight Farbe des cda_ mehr
+							Kontrast entwickeln kann und mehr Wirkung/Aussage entfalten kann.
+							Zudem wird solch eine Darstellung von immer mehr Nutzern, egal auf
+							welcher Plattform, gewünscht, da sie erträglicher für die Augen
+							sein kann oder Nutzer diese Form der Darstellung heutzutage
+							präferieren.
+						</p>
+					</figcaption>
+				</figure>
+
+				<!-- ContentBlock 50% Bild 50% Text
+          ####################################################################-->
+				<figure id="overview" class="m-portfolioItem2Columns content-item">
+					<img
+						class="m-portfolioItem-image"
+						src="img/01-desktop-overview.jpg"
+					/>
+					<figcaption>
+						<h2 class="m-portfolioItem-title">Overview</h2>
+						<p>
+							Der verfügbare Platz ist in einen Hauptbereich und eine Sidebar
+							aufgeteilt, sodass gleichzeitig die „Timewheel“ und die Cards
+							bedient werden können und der User bei Änderungen am Timewheel
+							direkt die Änderungen bei den Cards sehen kann. Zudem sind die
+							beiden Bereiche so durch das Gesetzt der Geschlossenheit von
+							einander getrennt, das dem User ersichtlich ist, dass er beide
+							Bereiche individuell bedienen kann.
+						</p>
+						<p>
+							Da auf einem Desktop/Notebook in der Regel, aufgrund des
+							Seitenverhältnisses, mehr Platz in der horizontalen zu Verfügung
+							steht werden die Cards in einer Sidebar dargestellt und lassen
+							sich vertikal scrollen. Eine Alternative dazu wäre gewesen, die
+							Cards am unteren Bildschirm Rand darzustellen und ein horizontales
+							Scrollen zu ermöglich. Dies wäre für Touch Devices durchaus
+							logisch gewesen, jedoch wäre dies bei einer Bedienung mit Maus und
+							Tastatur unpraktisch.
+						</p>
+					</figcaption>
+				</figure>
+
+				<!-- ContentBlock 50% Bild 50% Text
+          ####################################################################-->
+				<figure id="main" class="m-portfolioItem2Columns content-item">
+					<img class="m-portfolioItem-image" src="img/d/01-d-detail-main.png" />
+					<figcaption>
+						<h2 class="m-portfolioItem-title">Main</h2>
+						<h3 class="m-portfolioItem-subtitle">Navigation</h3>
+						<p>
+							Die erforderlichen Funktionen sind nicht, wie oft üblich, hinter
+							einem „Burger-Menu“ versteckt, sondern direkt in den Ecken des
+							Main Bereichs platziert, sodass der User jede Funktion mit nur
+							einem Klick nutzen kann.
+						</p>
+						<p>
+							Die Navigationselemente sind anhand ihrer Priorität entlang der
+							üblichen Leserichtung, von links nach rechts und von oben nach
+							unten, platziert. Eine Funktion Neuigkeiten über Werke und das
+							Archiv zu erhalten ist, gerade für Fortgeschrittene und Experten,
+							äußerst interessant und somit direkt auf den ersten Blick
+							ersichtlich. Von ähnlich hoher Priorität ist die Hilfe für
+							unerfahrene und neue Nutzer, dementsprechend ist diese ebenfalls
+							leicht ersichtlich. Die „Reset“ Funktion ist erst im laufe der
+							User-Journey erforderlich, wenn der User sich bereits mit dem
+							System vertraut gemacht hat, und somit mit niedrigerer Priorität
+							bewertet. Da die Sprache in der Regel automatisch anhand der
+							Browser Sprache des Users gesetzt werden sollte, hat der
+							Sprachwechsler die niedrigste Priorität in der Navigation.
+						</p>
+						<p>
+							Zusätzlich befindet sich der Slider zum Einstellen der Zeitspanne,
+							also so zu sagen zum „Zoomen“ der Zeit, am unteren Bildschirm Rand
+							und nicht in den Filtern, da dies eine essenzielle Funktion der
+							Seite ist und somit immer zu sehen sein sollte. Dem User ist somit
+							zu jedem Zeitpunkt möglich den ausgewählten Zeitraum zu verändern.
+						</p>
+					</figcaption>
+				</figure>
+
+				<figure class="m-portfolioItem2Columns content-item">
+					<img
+						class="m-portfolioItem-image"
+						src="img/d/02-d-detail-timewheel.png"
+					/>
+					<figcaption>
+						<h2 class="m-portfolioItem-title">Main</h2>
+						<h3 class="m-portfolioItem-subtitle">Timewheel</h3>
+						<p>
+							Die erforderliche „Timeline“ wird ein wenig anders als „Timewheel“
+							dargestellt. Der User stellt das gewünscht Jahr durch Drehen des
+							Rades ein, ähnlich wie bei einem Lautstärkeregler. Es ist nach wie
+							vor eine präzise Auswahl des gewünschten Jahres möglich, da sowohl
+							eine Orientierung anhand des fixierten Indikators am oberen Rand
+							möglich ist, aber auch eine Eingabe des Jahres, da das Jahr in der
+							Mitte zugleich anzeige und Input-Field ist. Primär fördert diese
+							Darstellung jedoch das explorative Verhalten von neuen Nutzern und
+							Laien, da das Timewheel ein spielerisches Element darstellt und
+							für viele User etwas Neues sein sollte. Durch dieses spezielle
+							Feature werden Nutzer sich auch mehr an diese Seite erinnern oder
+							sie weiterempfehlen.
+						</p>
+						<p>
+							Im Zentrum des Timewheels werden, neben dem ausgewählten Jahr,
+							weiter Details dargestellt. Die Details und das Jahr befinden sich
+							im Zentrum, da somit dem User klar dargestellt wird, dass diese
+							Inhalte sich auf das ausgewählte Jahr beziehen und sich beim
+							Drehen dementsprechend verändern.
+						</p>
+						<p>
+							In den Details wird zum einen die Anzahl der Werke und die Anzahl
+							der Archivalien in einem Jahr, als auch ein historisches Ereignis
+							dargestellt. Beides sind Informationen, welche für neue Nutzer
+							interessant sein könnte und ein Interesse and den Inhalten eines
+							Jahres entwickeln könnte. Die historischen Ereignisse sind zudem
+							für Experten Interessant, um mögliche Verbindungen zwischen
+							Werkern und Ereignissen herstellen zu können.
+						</p>
+					</figcaption>
+				</figure>
+
+				<figure id="sidebar" class="m-portfolioItem2Columns content-item">
+					<img
+						class="m-portfolioItem-image"
+						src="img/d/05-d-detail-sidebar.jpg"
+					/>
+					<figcaption>
+						<h2 class="m-portfolioItem-title">Sidebar</h2>
+						<h3 class="m-portfolioItem-subtitle">Overview</h3>
+						<p>
+							In der Sidebar werden die Werke des ausgewählten Zeitraums in Form
+							einer Card pro Werk dargestellt. Diese Cards werden durch
+							Separatoren mit Jahreszahlen in Gruppe dargestellt, somit kann
+							sich der User leichter und schneller innerhalb der Sidebar
+							zurechtfinden.
+						</p>
+						<p>
+							Neben den Cards werden hier auch die Filter dargestellt, sodass
+							der User direkt assoziieren kann, dass die Filter einen Einfluss
+							auf die Elemente darunter haben. Diese Geschlossenheit der
+							Elemente Card und Filter wird durch die Trennung in Main-Bereich
+							und Sidebar weiterhin gefördert. Zudem ist die Suche und der
+							Filter Button am oberen Rand fixiert, sodass der User jederzeit
+							darauf zugreifen kann.
+						</p>
+						<p>
+							Wenn am Timewheel ein neues Jahr ausgewählt wird, werden in der
+							Sidebar die Elemente automatisch auf das entsprechende Jahr
+							gescrollt.
+						</p>
+					</figcaption>
+				</figure>
+
+				<figure class="m-portfolioItem2Columns content-item">
+					<div>
+						<img
+							class="m-portfolioItem-image"
+							src="img/d/07-d-detail-card.png"
+						/>
+						<img src="img/d/06-d-detail-card-expanded.png" />
+					</div>
+
+					<figcaption>
+						<h2 class="m-portfolioItem-title">Sidebar</h2>
+						<h3 class="m-portfolioItem-subtitle">Cards</h3>
+						<p>
+							Die Werke in der Sidebar werden als Cards dargestellt, welche
+							wesentliche Informationen und Funktionen zu einem Werk enthalten.
+							Durch die Erhöhung des Objektes durch einen Schatten und das
+							Gruppieren aller Informationen und Funktionen ist für den User
+							direkt ersichtlich, dass eine Card für ein Objekt steht.
+						</p>
+						<p>
+							Im oberen Bereich der Card werden Informationen zu einem Werk
+							dargestellt. Das eigentliche Werk oder Gemälde nimmt in diesem
+							Bereich ungefähr 38% der Fläche ein, was in etwa dem Goldenen
+							Schnitt entspricht. So wirkt das Objekt harmonisch zum Rest des
+							Bereichs und es entsteht ein Format, in welchem ein Großteil der
+							Gemälde ohne schwarze Balken dargestellt werden kann. Des Weiteren
+							wird der Titel, das Entstehungsjahr und der aktuelle Standort
+							dargestellt. Der Titel und das Datum sind essenziell für alle
+							Nutzer Gruppen und der Standort stellt Informationen dar, welche
+							ebenfalls für alle Nutzergruppen interessant sein könnten. Der
+							Standort wird mithilfe einer Flagge des Landes dargestellt, sodass
+							direkt auf den ersten Blick ersichtlich ist in welchem Land sich
+							ein Werk befindet, selbst wenn man die Stadt nicht kennt.
+						</p>
+						<p>
+							Der zweite Bereich einer Card enthält die Funktionen. Das Ziel war
+							es, erweiterte Informationen darzustellen und trotzdem eine
+							Navigation zu der Detailseite eines Werkes mit nur einem Klick zu
+							ermöglich. Somit lässt sich eine Card mit der „Mehr“ Funktion
+							ausfahren und dem User werden erweiterte Informationen angezeigt,
+							welche bei der Auswahl eines Gemäldes helfen können, ohne extra
+							die Detailseite öffnen zu müssen. Gleichzeitig lässt sich die
+							Detailseite über den „Outgoing Link“ Button öffnen. Des Weiteren
+							wird dem User in diesem Bereich die Möglichkeit gegeben, ein Werk
+							zu „liken“ oder zu „favorisieren“, somit kann der User seine
+							Lieblingswerke speichern oder Werke speichern, welcher er später
+							genauer analysieren möchte. Beide Funktionen sind sowohl für
+							Experten als auf für Laien von Bedeutung.
+						</p>
+					</figcaption>
+				</figure>
+
+				<figure class="m-portfolioItem2Columns content-item">
+					<div>
+						<img src="img/02-desktop-filter.jpg" />
+					</div>
+
+					<figcaption>
+						<h2 class="m-portfolioItem-title">Sidebar</h2>
+						<h3 class="m-portfolioItem-subtitle">Filter</h3>
+						<p>
+							Die geöffneten Filter befinden sich ebenfalls in der Sidebar,
+							sodass durch das Gesetz der Geschlossenheit auf den ersten Blick
+							klar ist, welche Objekte von den Filtern beeinflusst werden. Es
+							gibt zwei Kategorien von Filter, zum einen einfach Ein/Aus Filter
+							und zum anderen Drop Down Filter, welche das Auswählen von einem
+							oder mehreren Einträgen aus einer Liste ermöglichen. Die Ein/Aus
+							Filter werden mithilfe eines Toggle Icons dargestellt, sodass der
+							User mit einem Klick seine Auswahl Ändern kann. Neben den üblichen
+							Filtern wie Zuschreibung und Inhalt findet der User hier ebenfalls
+							eine Option zu Sortierung und diverse andere explorative Features.
+						</p>
+						<p>
+							Die Sortierung ermöglicht es dem Nutzer, neben den klassischen
+							Optionen wie „Datum“ und „Alphabetisch“ auf nach Standort, Wert
+							und Beliebtheit zu sortieren. Dies sind Sortierungsoptionen,
+							welche gerade für Laien und Nutzer sehr interessant sind und die
+							Interaktion mit dem cda_ fördern.
+						</p>
+						<p>
+							Um einen besseren Zugang zu den Werken von Lucas Cranach zu
+							ermöglichen, lassen sich die Werke zudem nach Ereignissen und
+							Standort sortieren. So kann der User ein geschichtliches Ereignis
+							auswählen und daraufhin werden ihm nur Werke angezeigt, welche
+							durch dieses Ereignis beeinflusst wurden. Wenn der User
+							beispielsweise im Urlaub ist und Werke entdecken will kann er,
+							neben der Sortierungsfunktion „In der Nähe“ auch Werke aus einem
+							bestimmten Land anzeigen. Des Weiteren kann sich der User auch nur
+							die Top100 Werke anzeigen lassen, was gerade für Laien für einen
+							besseren Überblickt sorgt.
+						</p>
+					</figcaption>
+				</figure>
+
+				<figure id="help" class="m-portfolioItem2Columns content-item">
+					<div>
+						<img src="img/04-dekstop-help_step1.jpg" />
+					</div>
+
+					<figcaption>
+						<h2 class="m-portfolioItem-title">Hilfe</h2>
+						<p>
+							Hilfe wird dem User in Form von Hinweisen in der Mitte des
+							Timewheels geboten. Diese Hinweise befinden sich in der Mitte des
+							Timewheels und ersetzten den eigentlichen Content darin, da so die
+							Hilfe am zentralsten Punkt der Seite dargestellt wird und der User
+							diese direkt wahrnehmen kann. Zudem werden Elemente, welche nicht
+							beschrieben werden, ausgeblendet, sodass schnell erkannt werden
+							kann welche Elemente gerade erklärt werden.
+						</p>
+						<p>
+							Die Hilfe ist ein drei Schritte aufgeteilt, zwischen welchen der
+							User frei navigieren kann, welche die essenziellen Funktionen des
+							Cranach Digital Archive erklären. Durch die geringe Anzahl an
+							Hinweise ist die Hilfe nicht überladen und der User liest sich
+							eher alle Hinweise durch.
+						</p>
+					</figcaption>
+				</figure>
+
+				<figure id="notifications" class="m-portfolioItem2Columns content-item">
+					<div>
+						<img src="img/03-desktop-notification.jpg" />
+					</div>
+
+					<figcaption>
+						<h2 class="m-portfolioItem-title">Notifications</h2>
+						<p>
+							Neuigkeiten werden ebenfalls als Cards dargestellt, so ist wieder
+							das Gesetz der Geschlossenheit erfüllt, eine Card steht für einen
+							neuen Beitrag. Zudem wir dem User durch das Gesetz der Ähnlichkeit
+							suggeriert, dass diese Neuigkeiten etwas mit den Werken aus der
+							Sidebar zu tun haben, da sich die Cards stark ähneln.
+						</p>
+						<p>
+							Eine ungelesene Neuigkeit erhält einen gelben Hintergrund, somit
+							ist auf den ersten Blick für den User sichtbar, welche Neuigkeiten
+							neu für Ihn sind. Neben einem Symbolbild oder Ausschnitt eines
+							neues Werkes enthält eine Neuigkeiten Card einen Titel, welcher
+							dem User kurz und direkt die nötigsten Informationen liefert, ein
+							Datum, welches zu chronologischen Sortierung dient, und ein kurzer
+							Detailtext, welcher interessierten Nutzern weitere Informationen
+							zu der Neuigkeit bietet.
+						</p>
+					</figcaption>
+				</figure>
+
+				<figure id="mobile" class="m-portfolioItem">
+					<figcaption>
+						<h2 class="m-portfolioItem-title">Mobile</h2>
+						<h3 class="m-portfolioItem-subtitle">414x763</h3>
+					</figcaption>
+					<figcaption>
+						<p>
+							Durch unser Timewheel ist uns die Möglichkeit gegeben unser Design
+							Konzept auf ein Mobile Gerät zu übertragen ohne große Abstriche
+							machen zu müssen. So galt unsere Arbeit an einem Mobile Gerät
+							primär der sinnvollen Reduzierung und Verschachtelung von bereits
+							bestehenden Elementen und Funktionen. So konnten wir den Experten
+							sowahl als auch den Laien die Möglichkeit bieten Mobil eine
+							ähnliche Erfahrung wie auf dem Desktop haben zu können.
+						</p>
+					</figcaption>
+				</figure>
+
+				<!-- ContentBlock 3 Spalten mit Bild und Text
+        ####################################################################-->
+				<figure class="m-portfolioItem3Columns  content-item">
+					<figcaption id="m-start">
+						<img
+							class="m-portfolioItem-image"
+							src="img/m/02-m-small-wheel.jpg"
+						/>
+						<h3 class="m-portfolioItem-subtitle">Start Ansicht</h3>
+						<p>
+							Auf der Mobile Version, haben wir uns im gegensatz zum Desktop für
+							ein Burgermenu entschieden, um auf dem kleineren Gerät etwas platz
+							zu schaffen. Die Neuigkeiten und der Sprach Wechsler wurden hier
+							zusammengefasst.
+						</p>
+						<p>
+							Den Slider zum Einstellen des Zeitraums wurde, ebenfalls um Platz
+							zu sparen, hinter einem Dropdown versteckt. Dies wurde bewusst
+							oben in der Mitte platziert, sodass dieser, egal auf welcher
+							ansicht man sich befindet, immer erreichbar und verstellbar ist.
+						</p>
+						<p>
+							Das Timewheel wurde ein wenig angepasst. Um White Space zu
+							schaffen wurden extra Timestamps enfernt.
+						</p>
+						<p>
+							Das Card-Element hält in dieser Ansicht 2 Cards, im selben Format
+							wie auf dem Desktop um Ähnlichkeit zu bewahren.
+						</p>
+						<p>
+							Die Funtkionen Suche und Filter wurden ebenfalls genauso platziert
+							wie auf dem Desktop um Ähnlichkeit zu bewahren, allerdings nur ein
+							Lupenicon anstelle eines Textfeldes um Platz in der Mitte zu
+							schaffen.
+						</p>
+					</figcaption>
+
+					<figcaption ide="m-detail">
+						<img
+							class="m-portfolioItem-image"
+							src="img/m/01-m-detail_wheel.jpg"
+						/>
+						<h3 class="m-portfolioItem-subtitle">Detail Ansicht</h3>
+						<p>
+							Nun ist die Möglichkeit gegeben das Card-Element zu verkleinern,
+							um mehr Fokus auf das Timewheel selbst zu legen und es einfacher
+							für den Nutzer zu machen dieses zu bewegen, ohne dass das
+							Card-Element sich im Weg befindet.
+						</p>
+						<p>
+							Das Timewheel vergrößtert sich, somit ensteht platz für ein
+							Ereignis, nur ohne Trennlinie um Ähnlichkeit zu der Start Ansicht
+							zu bewahren.
+						</p>
+						<p>
+							Das Card-Element wird reduziert auf eine einzige Card, diese ist
+							nun breiter, um den gegebenen Platz zu füllen.
+						</p>
+					</figcaption>
+
+					<figcaption id="m-browse">
+						<img class="m-portfolioItem-image" src="img/m/03-m-explore.jpg" />
+						<h3 class="m-portfolioItem-subtitle">Browse Ansicht</h3>
+						<p>
+							In der ausgefahrenen Ansicht des Card-Elements, besteht die
+							Möglichkeit einfacher und übersichtlicher die ausgewählte
+							Zeitspanne zu erkunden. Wie bereits erwähnt bleibt die
+							Möglichkeit, die Zeitspanne an dem Slider einzustellen, bestehen.
+						</p>
+						<p>
+							Die Cards selbst wurden im gegensatz zum Desktop etwas reduziert.
+							Da wir hier Platz für 2 Cards nebeneinander haben, ist es nun
+							nicht mehr möglich die Cards auszufahren, um die Anordnung im Takt
+							zu halten und Platz auf dem kleineren gerät zu sparen. Der „Mehr“
+							Button dient nun der weiterleitung an das „CDA_“. So konnten wir
+							uns den extra „Link“ Button und somit auch Platz sparen.
+						</p>
+					</figcaption>
+				</figure>
+
+				<!-- ContentBlock 3 Spalten mit Bild und Text
+        ####################################################################-->
+				<figure class="m-portfolioItem3Columns  content-item">
+					<figcaption id="m-search">
+						<img
+							class="m-portfolioItem-image"
+							src="img/m/04-m-search_explore.jpg"
+						/>
+						<h3 class="m-portfolioItem-subtitle">Suche</h3>
+						<p>
+							Die Suche beherbergt immer auch die Browse Ansicht, um trotz der
+							Tastatur die Möglichkeit zu bieten seine Suchergebnisse zu sehen,
+							ohne die Suche wieder schließen zu müssen. Auch hier bleibt der
+							Slider um die Zeitspanne einzustellen erreichbar.
+						</p>
+					</figcaption>
+
+					<figcaption id="m-filter">
+						<img class="m-portfolioItem-image" src="img/m/06-m-filter.jpg" />
+						<h3 class="m-portfolioItem-subtitle">Filter</h3>
+						<p>
+							Die Filter wurden auf einer Slide platziert, welche den großteils
+							des Screens verdeckt, um selbst bei aufgeklappten Filtern genug
+							Platz für den Rest zu haben. Aus dem gleichen Grund wurden die
+							Dropdowns etwas verschmälert, um zwei nebeneinander platzieren zu
+							können. Ausserdem vermeidet der überdeckende Filter Overflow durch
+							das Tiemwheel und der Cards.
+						</p>
+					</figcaption>
+
+					<figcaption id="m-help">
+						<img
+							class="m-portfolioItem-image"
+							src="img/m/05-m-help_step_1.jpg"
+						/>
+						<h3 class="m-portfolioItem-subtitle">Hilfe</h3>
+						<p>
+							Dadurch das alle zentralen Elemente der Desktop Version erhalten
+							bleiben, ist die Hilfe genauso gestaltet wie in der Desktop
+							Version. Dadurch muss der User sich nicht auf neue Funktionen und
+							Hinweise einstellen und kann ohne große Lernkurve mit der Seite
+							arbeiten.
+						</p>
+					</figcaption>
+				</figure>
+
+				<figure id="styleguide">
+					<h2>Styleguide</h2>
+					<img src="img/Styleguide.svg" />
+				</figure>
+			</div>
 		</main>
+
+		<footer id="l-mainFooter">
+			<p>
+				Diese Arbeiten sind im Rahmen des Kurses
+				<a href="https://th-koeln.github.io/mi-bachelor-screendesign/">
+					Screendesign</a
+				>
+				im Studiengang
+				<a href="https://www.medieninformatik.th-koeln.de/study/bachelor/">
+					Medieninformatik</a
+				>
+				an der <a href="https://www.th-koeln.de/">TH Köln</a> entstanden.
+			</p>
+		</footer>
 	</body>
 </html>
