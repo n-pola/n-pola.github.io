@@ -3,7 +3,7 @@ body {
 }
 
 .l-mainHeader-img {
-	background: url("/img/mockup2.jpg");
+	background: url("./img/mockup2.jpg");
 	background-size: cover;
 	width: 100% !important;
 	height: 100%;
