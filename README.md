@@ -1,4 +1,4 @@
-# [Screendesign Dokumentation](https://n-pola.github.io/) von Luca Kilp & Nils Polarek
+# [Screendesign Dokumentation](n-pola.github.io/sd-ws1920-cranach/) von Luca Kilp & Nils Polarek
 
 ## Einleitung
 ### Cranach Digital Archive
